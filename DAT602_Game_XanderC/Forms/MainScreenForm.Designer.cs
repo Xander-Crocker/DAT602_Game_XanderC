@@ -1,4 +1,4 @@
-﻿namespace DAT602_TileWars_XanderC_2023
+﻿namespace DAT602_Game_XanderC
 {
     partial class MainScreenForm
     {
@@ -30,46 +30,39 @@
         {
             label1 = new Label();
             NewGameButton = new Button();
-            JoinGameButton = new Button();
             AdminConsoleButton = new Button();
             LogOutButton = new Button();
+            deleteAccBtn = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(258, 35);
+            label1.Location = new Point(226, 26);
             label1.Name = "label1";
-            label1.Size = new Size(274, 81);
+            label1.Size = new Size(219, 65);
             label1.TabIndex = 4;
             label1.Text = "Tile Wars";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // NewGameButton
             // 
-            NewGameButton.Location = new Point(322, 158);
+            NewGameButton.Location = new Point(282, 118);
+            NewGameButton.Margin = new Padding(3, 2, 3, 2);
             NewGameButton.Name = "NewGameButton";
-            NewGameButton.Size = new Size(144, 69);
+            NewGameButton.Size = new Size(126, 52);
             NewGameButton.TabIndex = 0;
             NewGameButton.Text = "New Game";
             NewGameButton.UseVisualStyleBackColor = true;
-            // 
-            // JoinGameButton
-            // 
-            JoinGameButton.Location = new Point(322, 264);
-            JoinGameButton.Name = "JoinGameButton";
-            JoinGameButton.Size = new Size(144, 69);
-            JoinGameButton.TabIndex = 1;
-            JoinGameButton.Text = "Join Game";
-            JoinGameButton.UseVisualStyleBackColor = true;
-            JoinGameButton.Click += JoinGameButton_Click;
+            NewGameButton.Click += NewGameButton_Click;
             // 
             // AdminConsoleButton
             // 
-            AdminConsoleButton.Location = new Point(694, 385);
+            AdminConsoleButton.Location = new Point(607, 289);
+            AdminConsoleButton.Margin = new Padding(3, 2, 3, 2);
             AdminConsoleButton.Name = "AdminConsoleButton";
-            AdminConsoleButton.Size = new Size(94, 53);
+            AdminConsoleButton.Size = new Size(82, 40);
             AdminConsoleButton.TabIndex = 2;
             AdminConsoleButton.Text = "Admin Controles";
             AdminConsoleButton.UseVisualStyleBackColor = true;
@@ -77,25 +70,37 @@
             // 
             // LogOutButton
             // 
-            LogOutButton.Location = new Point(12, 385);
+            LogOutButton.Location = new Point(10, 289);
+            LogOutButton.Margin = new Padding(3, 2, 3, 2);
             LogOutButton.Name = "LogOutButton";
-            LogOutButton.Size = new Size(94, 53);
+            LogOutButton.Size = new Size(82, 40);
             LogOutButton.TabIndex = 9;
             LogOutButton.Text = "Log Out";
             LogOutButton.UseVisualStyleBackColor = true;
             LogOutButton.Click += LogOutButton_Click;
             // 
-            // MainWindowForm
+            // deleteAccBtn
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            deleteAccBtn.Location = new Point(303, 289);
+            deleteAccBtn.Name = "deleteAccBtn";
+            deleteAccBtn.Size = new Size(82, 40);
+            deleteAccBtn.TabIndex = 10;
+            deleteAccBtn.Text = "Delete Account";
+            deleteAccBtn.UseVisualStyleBackColor = true;
+            deleteAccBtn.Click += deleteAccBtn_Click;
+            // 
+            // MainScreenForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
+            Controls.Add(deleteAccBtn);
             Controls.Add(LogOutButton);
             Controls.Add(AdminConsoleButton);
-            Controls.Add(JoinGameButton);
             Controls.Add(NewGameButton);
             Controls.Add(label1);
-            Name = "MainWindowForm";
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "MainScreenForm";
             Text = "Main Window";
             ResumeLayout(false);
             PerformLayout();
@@ -105,8 +110,8 @@
 
         private Label label1;
         private Button NewGameButton;
-        private Button JoinGameButton;
         private Button AdminConsoleButton;
         private Button LogOutButton;
+        private Button deleteAccBtn;
     }
 }

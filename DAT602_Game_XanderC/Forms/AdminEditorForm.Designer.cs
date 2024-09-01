@@ -1,4 +1,4 @@
-﻿namespace DAT602_TileWars_XanderC_2023
+﻿namespace DAT602_Game_XanderC
 {
     partial class AdminEditorForm
     {
@@ -94,6 +94,7 @@
             UpdateButton.TabIndex = 7;
             UpdateButton.Text = "Update";
             UpdateButton.UseVisualStyleBackColor = true;
+            UpdateButton.Click += UpdateButton_Click;
             // 
             // AdminEditorForm
             // 

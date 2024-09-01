@@ -1,4 +1,4 @@
-﻿namespace DAT602_TileWars_XanderC_2023
+﻿namespace DAT602_Game_XanderC
 {
     partial class AdminConsoleForm
     {
@@ -28,83 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CurrentGamesListbox = new System.Windows.Forms.ListBox();
-            this.KillGameButton = new System.Windows.Forms.Button();
-            this.CurrentUsersListbox = new System.Windows.Forms.ListBox();
-            this.CreateButton = new System.Windows.Forms.Button();
-            this.EditButton = new System.Windows.Forms.Button();
-            this.DeleteButton = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            CurrentGamesListbox = new ListBox();
+            KillGameButton = new Button();
+            CurrentUsersListbox = new ListBox();
+            CreateButton = new Button();
+            EditButton = new Button();
+            DeleteButton = new Button();
+            homebtn = new Button();
+            SuspendLayout();
             // 
             // CurrentGamesListbox
             // 
-            this.CurrentGamesListbox.FormattingEnabled = true;
-            this.CurrentGamesListbox.ItemHeight = 20;
-            this.CurrentGamesListbox.Location = new System.Drawing.Point(35, 43);
-            this.CurrentGamesListbox.Name = "CurrentGamesListbox";
-            this.CurrentGamesListbox.Size = new System.Drawing.Size(345, 324);
-            this.CurrentGamesListbox.TabIndex = 0;
+            CurrentGamesListbox.FormattingEnabled = true;
+            CurrentGamesListbox.ItemHeight = 15;
+            CurrentGamesListbox.Location = new Point(31, 32);
+            CurrentGamesListbox.Margin = new Padding(3, 2, 3, 2);
+            CurrentGamesListbox.Name = "CurrentGamesListbox";
+            CurrentGamesListbox.Size = new Size(302, 244);
+            CurrentGamesListbox.TabIndex = 0;
             // 
             // KillGameButton
             // 
-            this.KillGameButton.Location = new System.Drawing.Point(286, 385);
-            this.KillGameButton.Name = "KillGameButton";
-            this.KillGameButton.Size = new System.Drawing.Size(94, 29);
-            this.KillGameButton.TabIndex = 1;
-            this.KillGameButton.Text = "Kill Game";
-            this.KillGameButton.UseVisualStyleBackColor = true;
+            KillGameButton.Location = new Point(250, 289);
+            KillGameButton.Margin = new Padding(3, 2, 3, 2);
+            KillGameButton.Name = "KillGameButton";
+            KillGameButton.Size = new Size(82, 22);
+            KillGameButton.TabIndex = 1;
+            KillGameButton.Text = "Kill Game";
+            KillGameButton.UseVisualStyleBackColor = true;
             // 
             // CurrentUsersListbox
             // 
-            this.CurrentUsersListbox.FormattingEnabled = true;
-            this.CurrentUsersListbox.ItemHeight = 20;
-            this.CurrentUsersListbox.Location = new System.Drawing.Point(420, 43);
-            this.CurrentUsersListbox.Name = "CurrentUsersListbox";
-            this.CurrentUsersListbox.Size = new System.Drawing.Size(340, 324);
-            this.CurrentUsersListbox.TabIndex = 2;
+            CurrentUsersListbox.FormattingEnabled = true;
+            CurrentUsersListbox.ItemHeight = 15;
+            CurrentUsersListbox.Location = new Point(368, 32);
+            CurrentUsersListbox.Margin = new Padding(3, 2, 3, 2);
+            CurrentUsersListbox.Name = "CurrentUsersListbox";
+            CurrentUsersListbox.Size = new Size(298, 244);
+            CurrentUsersListbox.TabIndex = 2;
             // 
             // CreateButton
             // 
-            this.CreateButton.Location = new System.Drawing.Point(420, 385);
-            this.CreateButton.Name = "CreateButton";
-            this.CreateButton.Size = new System.Drawing.Size(94, 29);
-            this.CreateButton.TabIndex = 3;
-            this.CreateButton.Text = "Create";
-            this.CreateButton.UseVisualStyleBackColor = true;
+            CreateButton.Location = new Point(368, 289);
+            CreateButton.Margin = new Padding(3, 2, 3, 2);
+            CreateButton.Name = "CreateButton";
+            CreateButton.Size = new Size(82, 22);
+            CreateButton.TabIndex = 3;
+            CreateButton.Text = "Create";
+            CreateButton.UseVisualStyleBackColor = true;
+            CreateButton.Click += CreateButton_Click;
             // 
             // EditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(543, 385);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(94, 29);
-            this.EditButton.TabIndex = 4;
-            this.EditButton.Text = "Edit";
-            this.EditButton.UseVisualStyleBackColor = true;
+            EditButton.Location = new Point(475, 289);
+            EditButton.Margin = new Padding(3, 2, 3, 2);
+            EditButton.Name = "EditButton";
+            EditButton.Size = new Size(82, 22);
+            EditButton.TabIndex = 4;
+            EditButton.Text = "Edit";
+            EditButton.UseVisualStyleBackColor = true;
+            EditButton.Click += EditButton_Click;
             // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(666, 385);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(94, 29);
-            this.DeleteButton.TabIndex = 5;
-            this.DeleteButton.Text = "Delete";
-            this.DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.Location = new Point(583, 289);
+            DeleteButton.Margin = new Padding(3, 2, 3, 2);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new Size(82, 22);
+            DeleteButton.TabIndex = 5;
+            DeleteButton.Text = "Delete";
+            DeleteButton.UseVisualStyleBackColor = true;
+            // 
+            // homebtn
+            // 
+            homebtn.Location = new Point(31, 289);
+            homebtn.Name = "homebtn";
+            homebtn.Size = new Size(75, 22);
+            homebtn.TabIndex = 6;
+            homebtn.Text = "Home";
+            homebtn.UseVisualStyleBackColor = true;
+            homebtn.Click += homebtn_Click;
             // 
             // AdminConsoleForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.EditButton);
-            this.Controls.Add(this.CreateButton);
-            this.Controls.Add(this.CurrentUsersListbox);
-            this.Controls.Add(this.KillGameButton);
-            this.Controls.Add(this.CurrentGamesListbox);
-            this.Name = "AdminConsoleForm";
-            this.Text = "Admin Console";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(700, 338);
+            Controls.Add(homebtn);
+            Controls.Add(DeleteButton);
+            Controls.Add(EditButton);
+            Controls.Add(CreateButton);
+            Controls.Add(CurrentUsersListbox);
+            Controls.Add(KillGameButton);
+            Controls.Add(CurrentGamesListbox);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "AdminConsoleForm";
+            Text = "Admin Console";
+            ResumeLayout(false);
         }
 
         #endregion
@@ -115,5 +135,6 @@
         private Button CreateButton;
         private Button EditButton;
         private Button DeleteButton;
+        private Button homebtn;
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace DAT602_TileWars_XanderC_2023
+﻿namespace DAT602_Game_XanderC
 {
-    partial class GameBoardForm
+    partial class GameboardForm
     {
         /// <summary>
         /// Required designer variable.

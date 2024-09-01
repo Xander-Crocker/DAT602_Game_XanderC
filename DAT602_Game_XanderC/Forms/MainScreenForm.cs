@@ -1,57 +1,47 @@
-﻿using DAT602_TileWars_XanderC_2023;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace DAT602_TileWars_XanderC_2023
+﻿namespace DAT602_Game_XanderC
 {
     public partial class MainScreenForm : Form
     {
         private RegistrationForm _register;
         private LoginForm _login;
-        private PlayerClass _playerClass;
         private AdminConsoleForm _adminForm;
+        private GameboardForm _gameboard;
+        public Player _player;
 
         public MainScreenForm()
         {
             InitializeComponent();
         }
 
-        public bool ShowDialog(LoginForm login, PlayerClass playerClass)
+        public bool ShowDialog(LoginForm login, Player player)
         {
-            //_register = register;
             _login = login;
-            _playerClass = playerClass;
-            return ShowDialog() == DialogResult.OK; 
+            _player = player;
+            return ShowDialog() == DialogResult.OK;
         }
 
         private void AdminConsoleButton_Click(object sender, EventArgs e)
         {
             _adminForm = new AdminConsoleForm();
-            _playerClass = new PlayerClass();
-
-            // Temp Fix
             this.Hide();
             _adminForm.ShowDialog();
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
-            _login.Show();
-            DialogResult = DialogResult.Cancel;
+            Application.Exit();
         }
 
-        private void JoinGameButton_Click(object sender, EventArgs e)
+        private void deleteAccBtn_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void NewGameButton_Click(object sender, EventArgs e)
+        {
+            _gameboard = new GameboardForm();
+            _gameboard.Show();
             this.Hide();
-            GameBoardForm _gameBoardForm = new GameBoardForm();
-            _gameBoardForm.ShowDialog();
         }
     }
 }

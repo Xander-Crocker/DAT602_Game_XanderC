@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DAT602_Game_XanderC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9988ea97aa369782c50638279be74902f940f4b4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54f66464a4d02a971992e7dfdfd4452b539898b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("DAT602_Game_XanderC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DAT602_Game_XanderC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

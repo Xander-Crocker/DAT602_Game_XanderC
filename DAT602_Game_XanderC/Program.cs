@@ -1,5 +1,3 @@
-using DAT602_TileWars_XanderC_2023;
-
 namespace DAT602_Game_XanderC
 {
     internal static class Program
