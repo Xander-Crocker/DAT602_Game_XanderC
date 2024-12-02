@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xande\\Source\\Repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\DAT602_Game_XanderC.csproj": {}
+    "C:\\Users\\ArchEnemy\\source\\repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\DAT602_Game_XanderC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xande\\Source\\Repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\DAT602_Game_XanderC.csproj": {
+    "C:\\Users\\ArchEnemy\\source\\repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\DAT602_Game_XanderC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xande\\Source\\Repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\DAT602_Game_XanderC.csproj",
+        "projectUniqueName": "C:\\Users\\ArchEnemy\\source\\repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\DAT602_Game_XanderC.csproj",
         "projectName": "DAT602_Game_XanderC",
-        "projectPath": "C:\\Users\\xande\\Source\\Repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\DAT602_Game_XanderC.csproj",
-        "packagesPath": "C:\\Users\\xande\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xande\\Source\\Repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\obj\\",
+        "projectPath": "C:\\Users\\ArchEnemy\\source\\repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\DAT602_Game_XanderC.csproj",
+        "packagesPath": "C:\\Users\\ArchEnemy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ArchEnemy\\source\\repos\\DAT602_Game_XanderC\\DAT602_Game_XanderC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\xande\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ArchEnemy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
@@ -43,8 +45,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -52,7 +55,7 @@
           "dependencies": {
             "MySql.Data": {
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[9.1.0, )"
             }
           },
           "imports": [
@@ -74,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

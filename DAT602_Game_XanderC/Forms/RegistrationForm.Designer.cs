@@ -40,11 +40,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(217, 7);
+            label1.Location = new Point(190, 9);
             label1.Name = "label1";
-            label1.Size = new Size(219, 65);
+            label1.Size = new Size(281, 65);
             label1.TabIndex = 9;
-            label1.Text = "Tile Wars";
+            label1.Text = "Registration";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PasswordTextbox

@@ -7,7 +7,7 @@
     <Compile Update="Forms\AdminEditorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\GameboardForm.cs">
+    <Compile Update="Forms\GameBoardForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\LoginForm.cs">
@@ -17,6 +17,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UpdateDetailsForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

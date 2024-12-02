@@ -28,27 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gameBoardDataGrid = new DataGridView();
             backBtn = new Button();
             YourScoreboard = new Label();
-            OpponentsScoreboard = new Label();
-            ((System.ComponentModel.ISupportInitialize)gameBoardDataGrid).BeginInit();
+            boardPanel = new Panel();
+            NewGameBtn = new Button();
+            richTextBox1 = new RichTextBox();
+            timeLabel = new Label();
+            StopGameBtn = new Button();
             SuspendLayout();
-            // 
-            // gameBoardDataGrid
-            // 
-            gameBoardDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gameBoardDataGrid.Location = new Point(192, 11);
-            gameBoardDataGrid.Margin = new Padding(3, 2, 3, 2);
-            gameBoardDataGrid.Name = "gameBoardDataGrid";
-            gameBoardDataGrid.RowHeadersWidth = 51;
-            gameBoardDataGrid.RowTemplate.Height = 29;
-            gameBoardDataGrid.Size = new Size(441, 316);
-            gameBoardDataGrid.TabIndex = 4;
             // 
             // backBtn
             // 
-            backBtn.Location = new Point(34, 271);
+            backBtn.Location = new Point(34, 587);
             backBtn.Margin = new Padding(3, 2, 3, 2);
             backBtn.Name = "backBtn";
             backBtn.Size = new Size(117, 40);
@@ -61,43 +52,86 @@
             // 
             YourScoreboard.AutoSize = true;
             YourScoreboard.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            YourScoreboard.Location = new Point(10, 27);
+            YourScoreboard.Location = new Point(12, 27);
             YourScoreboard.Name = "YourScoreboard";
-            YourScoreboard.Size = new Size(115, 20);
+            YourScoreboard.Size = new Size(106, 20);
             YourScoreboard.TabIndex = 7;
-            YourScoreboard.Text = "Your Score = 0";
+            YourScoreboard.Text = "Your Score: 0";
             // 
-            // OpponentsScoreboard
+            // boardPanel
             // 
-            OpponentsScoreboard.AutoSize = true;
-            OpponentsScoreboard.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            OpponentsScoreboard.Location = new Point(10, 61);
-            OpponentsScoreboard.Name = "OpponentsScoreboard";
-            OpponentsScoreboard.Size = new Size(160, 20);
-            OpponentsScoreboard.TabIndex = 8;
-            OpponentsScoreboard.Text = "Opponents Score = 0";
+            boardPanel.BackColor = Color.White;
+            boardPanel.BorderStyle = BorderStyle.FixedSingle;
+            boardPanel.Location = new Point(191, 27);
+            boardPanel.Name = "boardPanel";
+            boardPanel.Size = new Size(600, 600);
+            boardPanel.TabIndex = 10;
             // 
-            // GameBoardForm
+            // NewGameBtn
+            // 
+            NewGameBtn.Location = new Point(34, 500);
+            NewGameBtn.Name = "NewGameBtn";
+            NewGameBtn.Size = new Size(117, 38);
+            NewGameBtn.TabIndex = 13;
+            NewGameBtn.Text = "New Game";
+            NewGameBtn.UseVisualStyleBackColor = true;
+            NewGameBtn.Click += NewGameBtn_Click;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(12, 171);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(168, 249);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "How to play:\n\nClick to move.\n\nYou can move in any direction one tile away.\n\nCollect as many items as possible before the time is up.\n\nPoints Key:\n\nRed = 20\nBlue = 15\nGreen = 10\nYellow = 5";
+            // 
+            // timeLabel
+            // 
+            timeLabel.AutoSize = true;
+            timeLabel.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            timeLabel.Location = new Point(12, 70);
+            timeLabel.Name = "timeLabel";
+            timeLabel.Size = new Size(47, 20);
+            timeLabel.TabIndex = 14;
+            timeLabel.Text = "Time:";
+            // 
+            // StopGameBtn
+            // 
+            StopGameBtn.Location = new Point(34, 544);
+            StopGameBtn.Name = "StopGameBtn";
+            StopGameBtn.Size = new Size(117, 38);
+            StopGameBtn.TabIndex = 15;
+            StopGameBtn.Text = "Stop Game";
+            StopGameBtn.UseVisualStyleBackColor = true;
+            StopGameBtn.Click += StopGameBtn_Click;
+            // 
+            // GameboardForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(651, 336);
-            Controls.Add(OpponentsScoreboard);
+            ClientSize = new Size(818, 649);
+            Controls.Add(StopGameBtn);
+            Controls.Add(timeLabel);
+            Controls.Add(richTextBox1);
+            Controls.Add(NewGameBtn);
+            Controls.Add(boardPanel);
             Controls.Add(YourScoreboard);
             Controls.Add(backBtn);
-            Controls.Add(gameBoardDataGrid);
             Margin = new Padding(3, 2, 3, 2);
-            Name = "GameBoardForm";
+            Name = "GameboardForm";
             Text = "Game Board";
-            ((System.ComponentModel.ISupportInitialize)gameBoardDataGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private DataGridView gameBoardDataGrid;
-        private Button backBtn;
-        private Label YourScoreboard;
-        private Label OpponentsScoreboard;
+
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Label YourScoreboard;
+        private System.Windows.Forms.Panel boardPanel;
+        private Button NewGameBtn;
+        private RichTextBox richTextBox1;
+        private Label timeLabel;
+        private Button StopGameBtn;
     }
 }

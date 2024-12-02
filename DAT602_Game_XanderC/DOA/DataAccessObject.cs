@@ -2,15 +2,19 @@
 
 namespace DAT602_Game_XanderC
 {
-    class DataAccessObject
+    internal class DatabaseAccessObject
     {
-        public static string connectionString
+        // Connection string to the database
+        private static string connectionString
         {
-            get { return "Server=localhost;Port=3306;Database=DAT602_A1_XanderC_2024;Uid=root;password=Archenemy042;"; }
+            get { return "Server=localhost;Port=3306;Database=DAT602TILES;Uid=root;password=@useVim97;"; }
         }
 
-        private static MySqlConnection _mySqlConnection = null;
-        public static MySqlConnection mySqlConnection
+        // Static MySqlConnection object
+        private static MySqlConnection? _mySqlConnection = null;
+
+        // MySqlConnection object
+        protected MySqlConnection mySqlConnection
         {
             get
             {
@@ -20,25 +24,28 @@ namespace DAT602_Game_XanderC
                 }
 
                 return _mySqlConnection;
+
             }
         }
 
-        public string Login(string pUsername, string pPassword)
+        // Test the connection to the database
+        public bool TestConnection()
         {
-            List<MySqlParameter> p = new List<MySqlParameter>();
-
-            var aP = new MySqlParameter("@username", MySqlDbType.VarChar, 50);
-            aP.Value = pUsername;
-            p.Add(aP);
-
-            var bP = new MySqlParameter("@password", MySqlDbType.VarChar, 50);
-            bP.Value = pPassword;
-            p.Add(bP);
-
-            var aDataSet = MySqlHelper.ExecuteDataset(mySqlConnection, "call Login(@username, @password)", p.ToArray());
-
-            return (aDataSet.Tables[0].Rows[0])["MESSAGE"].ToString();
+            try
+            {
+                // Open the connection
+                using (var connection = new MySqlConnection(mySqlConnection.ConnectionString))
+                {
+                    connection.Open();
+                    Console.WriteLine("Connection successful!");
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Connection failed: {ex.Message}");
+                return false;
+            }
         }
-
     }
 }

@@ -11,41 +11,39 @@
             InitializeComponent();
         }
 
+        // Event handler for the registration button click
         private void RegistrationButton_Click(object sender, EventArgs e)
         {
-            /*DatabaseAccessObject aDB = new DatabaseAccessObject();
-            string aMessage = aDB.registerPlayer(this.FirstNameTextbox.Text, this.LastNameTextbox.Text, this.EmailTextbox.Text, this.UsernameTextbox.Text, this.PasswordTextbox.Text);
-            MessageBox.Show(aMessage);
+            // Retrieve user input from textboxes
+            string username = UsernameTextbox.Text;
+            string password = PasswordTextbox.Text;
+            string email = EmailTextbox.Text;
 
-            DialogResult = DialogResult.OK;
+            // Create an instance of the login data access object
+            clsLoginDAO loginDAO = new clsLoginDAO();
+            // Attempt to register the user with the provided details
+            bool isRegistered = loginDAO.Register(username, password, email);
 
-            this.Hide();
-            LoginForm _login = new LoginForm();
-            _login.ShowDialog();*/
-
-            /*DatabaseAccessObject dbRegister = new DatabaseAccessObject();
-
-            switch (dbRegister.registerPlayer(this.EmailTextbox.Text, this.UsernameTextbox.Text, this.PasswordTextbox.Text))
+            // Check if registration was successful
+            if (isRegistered)
             {
-                case RegisterState.Success:
-
-                    LoginForm loginPage = new LoginForm();
-                    _login = new LoginForm();
-                    this.Hide();
-                    if (_login.ShowDialog(this, _playerClass))
-                    {
-                        this.Show();
-                    };
-                    break;
-                default:
-                    MessageBox.Show("Registration not successful try again");
-                    break;
-            }*/
+                MessageBox.Show("Registration successful!");
+                this.Hide();
+                // Show the login form after successful registration
+                LoginForm _login = new LoginForm();
+                _login.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Registration failed. Please try again.");
+            }
         }
 
+        // Event handler for the login button click
         private void LoginButton_Click(object sender, EventArgs e)
         {
             this.Hide();
+            // Show the login form when the login button is clicked
             LoginForm _login = new LoginForm();
             _login.ShowDialog();
         }

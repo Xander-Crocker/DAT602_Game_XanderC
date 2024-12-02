@@ -1,0 +1,5 @@
+1/12/2024 8:36:56 am: Executing stored procedure with parameters:
+1/12/2024 8:36:56 am: Username: AdminUser
+1/12/2024 8:36:56 am: Password: adminpass
+1/12/2024 8:36:56 am: Stored procedure returned message: Login successful
+1/12/2024 8:37:00 am: Connection failed: Authentication to host 'localhost' for user 'root' using method 'caching_sha2_password' failed with message: Access denied for user 'root'@'localhost' (using password: NO)

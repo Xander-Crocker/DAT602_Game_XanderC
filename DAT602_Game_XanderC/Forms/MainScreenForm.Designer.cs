@@ -32,14 +32,14 @@
             NewGameButton = new Button();
             AdminConsoleButton = new Button();
             LogOutButton = new Button();
-            deleteAccBtn = new Button();
+            updateAccBtn = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(226, 26);
+            label1.Location = new Point(242, 26);
             label1.Name = "label1";
             label1.Size = new Size(219, 65);
             label1.TabIndex = 4;
@@ -53,7 +53,7 @@
             NewGameButton.Name = "NewGameButton";
             NewGameButton.Size = new Size(126, 52);
             NewGameButton.TabIndex = 0;
-            NewGameButton.Text = "New Game";
+            NewGameButton.Text = "Start Game";
             NewGameButton.UseVisualStyleBackColor = true;
             NewGameButton.Click += NewGameButton_Click;
             // 
@@ -79,22 +79,22 @@
             LogOutButton.UseVisualStyleBackColor = true;
             LogOutButton.Click += LogOutButton_Click;
             // 
-            // deleteAccBtn
+            // updateAccBtn
             // 
-            deleteAccBtn.Location = new Point(303, 289);
-            deleteAccBtn.Name = "deleteAccBtn";
-            deleteAccBtn.Size = new Size(82, 40);
-            deleteAccBtn.TabIndex = 10;
-            deleteAccBtn.Text = "Delete Account";
-            deleteAccBtn.UseVisualStyleBackColor = true;
-            deleteAccBtn.Click += deleteAccBtn_Click;
+            updateAccBtn.Location = new Point(306, 286);
+            updateAccBtn.Name = "updateAccBtn";
+            updateAccBtn.Size = new Size(82, 40);
+            updateAccBtn.TabIndex = 11;
+            updateAccBtn.Text = "Update Account Details";
+            updateAccBtn.UseVisualStyleBackColor = true;
+            updateAccBtn.Click += updateAccBtn_Click;
             // 
             // MainScreenForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
-            Controls.Add(deleteAccBtn);
+            Controls.Add(updateAccBtn);
             Controls.Add(LogOutButton);
             Controls.Add(AdminConsoleButton);
             Controls.Add(NewGameButton);
@@ -112,6 +112,6 @@
         private Button NewGameButton;
         private Button AdminConsoleButton;
         private Button LogOutButton;
-        private Button deleteAccBtn;
+        private Button updateAccBtn;
     }
 }
